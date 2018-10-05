@@ -1,0 +1,35 @@
+HW#1 
+$ curl -O https://biodataprog.github.io/2018_programming-intro/data/Ecoli-vs-Yersinia.BLASTP.tab.gz
+
+$ echo 484KB
+
+HW#2
+$ gunzip Ecoli-vs-Yersinia.BLASTP.tab
+
+$ echo 2.2MB
+
+HW#3
+$ head -25 Ecoli-vs-Yersinia.BLASTP.tab
+
+$ tail Ecoli-vs-Yersinia.BLASTP.tab
+
+$ head Ecoli-vs-Yersinia.BLASTP.tab
+
+$ echo  “2152933”
+
+
+HW #4 
+$ curl -O https://biodataprog.github.io/2018_programming-intro/data/Nc3H.expr.tab
+
+$ awk '{print $6}' Nc3H.expr.tab | head -10 > Nc20H.expr.sorted.tab
+
+HW#5
+$ awk '{ if ($3 == 100) { print } }' Ecoli-vs-Yersinia.BLASTP.tab | head
+
+$ awk '{ if ($3 == 90) { print } }' Ecoli-vs-Yersinia.BLASTP.tab | head
+
+HW#6
+$ curl -O https://biodataprog.github.io/2018_programming-intro/data/codon_table.txt
+
+$ awk '{print $2}' codon_table.txt
+$ awk '{print $1 $3}' codon_table.txt | sort | uniq
